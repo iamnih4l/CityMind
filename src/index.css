@@ -1,0 +1,464 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #040711;
+    color: #f1f5f9;
+    background-image: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(99, 102, 241, 0.08), transparent),
+      radial-gradient(ellipse 50% 30% at 0% 90%, rgba(16, 185, 129, 0.06), transparent);
+    background-attachment: fixed;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Cinematic Font Classes */
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Legacy Alias Mappings to modern cinematic typography */
+.font-pixel {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.font-dialog {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* 3D Cinematic Glassmorphism & Surface Elevation */
+.cinematic-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(11, 18, 32, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    0 1px 3px 0 rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.cinematic-glass-glow {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(99, 102, 241, 0.04) 100%), rgba(10, 16, 30, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 
+    0 24px 48px -12px rgba(2, 132, 199, 0.25),
+    0 0 20px 0 rgba(56, 189, 248, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+/* 3D Glass Box Classes (replaces 2D pixel-box) */
+.pixel-box, .pixel-box-blue {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(8, 14, 26, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.6),
+    0 0 25px -5px rgba(14, 165, 233, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.pixel-box-red {
+  background: linear-gradient(145deg, rgba(30, 10, 14, 0.85) 0%, rgba(18, 5, 8, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 30px -5px rgba(225, 29, 72, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.pixel-box-cyan {
+  background: linear-gradient(145deg, rgba(8, 25, 38, 0.85) 0%, rgba(4, 14, 24, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 30px -5px rgba(6, 182, 212, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.pixel-box-gold {
+  background: linear-gradient(145deg, rgba(30, 22, 8, 0.85) 0%, rgba(18, 12, 4, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 30px -5px rgba(245, 158, 11, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.pixel-box-emerald {
+  background: linear-gradient(145deg, rgba(6, 28, 18, 0.85) 0%, rgba(3, 16, 10, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 30px -5px rgba(16, 185, 129, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.pixel-box-purple {
+  background: linear-gradient(145deg, rgba(24, 12, 36, 0.85) 0%, rgba(14, 6, 22, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 30px -5px rgba(168, 85, 247, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+/* 3D Tactile Buttons (replaces flat 2D pixel-btn) */
+.pixel-btn, .btn-3d-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.pixel-btn:hover, .btn-3d-secondary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #27364d 0%, #152033 100%);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 
+    0 8px 20px -4px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(56, 189, 248, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.pixel-btn:active, .btn-3d-secondary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* 3D Primary Button */
+.btn-3d-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #06b6d4 0%, #0284c7 100%);
+  color: #030712;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 6px 20px -2px rgba(6, 182, 212, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-3d-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #22d3ee 0%, #0ea5e9 100%);
+  box-shadow: 
+    0 10px 25px -2px rgba(6, 182, 212, 0.6),
+    0 0 20px rgba(34, 211, 238, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.btn-3d-primary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 3px 8px rgba(6, 182, 212, 0.3),
+    inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-btn-red {
+  background: linear-gradient(180deg, #e11d48 0%, #be123c 100%);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 6px 20px -2px rgba(225, 29, 72, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.pixel-btn-red:hover {
+  background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%);
+  box-shadow: 0 10px 25px -2px rgba(225, 29, 72, 0.6);
+}
+
+.pixel-btn-yellow {
+  background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 6px 20px -2px rgba(245, 158, 11, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.pixel-btn-yellow:hover {
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow: 0 10px 25px -2px rgba(245, 158, 11, 0.6);
+}
+
+/* 3D Perspective & Spatial Transform Utilities */
+.perspective-container {
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.tilt-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.tilt-3d-card:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+/* Cinematic 3D Map Isometric Projection */
+.isometric-map-stage {
+  transform: perspective(1200px) rotateX(38deg) rotateZ(-18deg);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 40px 80px -20px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(14, 165, 233, 0.15);
+}
+
+.isometric-map-stage-flat {
+  transform: perspective(1200px) rotateX(0deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 3D Glowing Volumetric Extrusions */
+.glow-cyan-3d {
+  box-shadow: 
+    0 0 30px -5px rgba(6, 182, 212, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glow-emerald-3d {
+  box-shadow: 
+    0 0 30px -5px rgba(16, 185, 129, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glow-rose-3d {
+  box-shadow: 
+    0 0 30px -5px rgba(244, 63, 94, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth custom cinematic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+  border-radius: 4px;
+  border: 2px solid rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.6);
+}
+
+/* ==========================================================================
+   COMMAND CENTER TACTICAL AESTHETICS & HUD OVERLAYS
+   ========================================================================== */
+.command-panel {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 11, 22, 0.98) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 
+    0 24px 50px -12px rgba(0, 0, 0, 0.85),
+    0 0 20px -3px rgba(14, 165, 233, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+
+/* Corner bracket reticles for tactical command panels */
+.hud-brackets::before,
+.hud-brackets::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-brackets::before {
+  top: 4px;
+  left: 4px;
+  border-top: 2px solid rgba(56, 189, 248, 0.7);
+  border-left: 2px solid rgba(56, 189, 248, 0.7);
+}
+.hud-brackets::after {
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.7);
+  border-right: 2px solid rgba(56, 189, 248, 0.7);
+}
+
+/* Scanline and tactical grid overlays */
+.tactical-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Drone Reconnaissance HUD Crosshair */
+.recon-crosshair {
+  position: relative;
+}
+.recon-crosshair::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(56, 189, 248, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   WEATHER PARTICLE SYSTEM (RAIN & VOLUMETRIC FOG)
+   ========================================================================== */
+@keyframes rainDropFall {
+  0% {
+    transform: translateY(-80px) translateX(-10px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(600px) translateX(60px);
+    opacity: 0.1;
+  }
+}
+
+.weather-rain-streak {
+  position: absolute;
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(to bottom, transparent, rgba(56, 189, 248, 0.75), rgba(255, 255, 255, 0.9));
+  animation: rainDropFall 0.85s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fogLayerDrift {
+  0% {
+    transform: translateX(-8%) translateY(0%) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(6%) translateY(-3%) scale(1.05);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(-8%) translateY(0%) scale(1);
+    opacity: 0.25;
+  }
+}
+
+.weather-fog-drift {
+  animation: fogLayerDrift 22s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   CINEMATIC CAMERA PAN VIEW SWITCHING TRANSITIONS
+   ========================================================================== */
+@keyframes cinematicCameraPan {
+  0% {
+    opacity: 0.1;
+    transform: perspective(1400px) rotateY(-3.5deg) translateX(36px) scale(0.985);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1400px) rotateY(0deg) translateX(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.cinematic-view-pan {
+  animation: cinematicCameraPan 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+

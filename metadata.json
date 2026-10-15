@@ -1,0 +1,6 @@
+{
+  "name": "CityMind — AI Urban Futures Simulator",
+  "description": "A multi-agent AI urban planning and city simulation platform evaluating redevelopment proposals across interconnected citizens, businesses, facilities, infrastructure, and environmental assets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
